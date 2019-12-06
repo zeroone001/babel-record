@@ -1,0 +1,33 @@
+{
+  "name": "babel-record",
+  "version": "1.0.0",
+  "description": "babel测试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel src --out-dir dist --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroone001/babel-record.git"
+  },
+  "author": "liuyongsheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeroone001/babel-record/issues"
+  },
+  "homepage": "https://github.com/zeroone001/babel-record#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.7.4"
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
+}
