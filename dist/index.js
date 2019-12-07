@@ -1,14 +1,16 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
+require("core-js/modules/es.object.to-string");
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/classCallCheck"));
+require("core-js/modules/es.promise");
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createClass"));
+var _class = _interopRequireDefault(require("./class.js"));
 
-var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var test = new _promise["default"](function (resolve, reject) {
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
+var test = new Promise(function (resolve, reject) {
   console.log('1231233');
   resolve('123');
 });
@@ -21,25 +23,5 @@ var fun1 = function fun1(params) {
 };
 
 fun1('a');
-
-var Boo =
-/*#__PURE__*/
-function () {
-  function Boo() {
-    (0, _classCallCheck2["default"])(this, Boo);
-    this.a = 1;
-  }
-
-  (0, _createClass2["default"])(Boo, [{
-    key: "get",
-    value: function get() {
-      console.log('1243');
-    }
-  }, {
-    key: "set",
-    value: function set() {
-      console.log('eqwew');
-    }
-  }]);
-  return Boo;
-}();
+var t1 = new _class["default"]('liuyongsheng');
+console.log(t1.age);

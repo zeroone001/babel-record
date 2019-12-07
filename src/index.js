@@ -1,3 +1,8 @@
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
+
+import Boo from './class.js';
+
 let test = new Promise((resolve, reject) => {
     console.log('1231233');
     resolve('123');
@@ -11,15 +16,5 @@ let fun1 = (params) => {
 };
 fun1('a');
 
-class Boo {
-    constructor () {
-        this.a = 1;
-    }
-    get () {
-        console.log('1243');
-    }
-    set () {
-        console.log('eqwew');
-    }
-}
-
+const t1 = new Boo('liuyongsheng');
+console.log(t1.age);

@@ -22,10 +22,12 @@
 配置如下
 ```js
 // .babelrc
+// The `corejs` option only has an effect when the `useBuiltIns` option is not `false`
 {
     "presets": [
         ["@babel/preset-env", {
             "corejs": 3,
+            "useBuiltIns": "usage",
             "modules": false // 对ES6的，模块不做转化
         }]
     ],
@@ -34,10 +36,29 @@
     ]
 }
 // 入口文件顶部加如下代码
-import "core-js/stable"; // polyfill ES features
-import "regenerator-runtime/runtime"; // 转化 generator function 
+//import "core-js/stable"; // polyfill ES features
+//import "regenerator-runtime/runtime"; // 转化 generator function 
 ```
+2. 第二种方案 transform-runtime
 
+需要安装的依赖有
+ * 基础:`@babel/core @babel/cli @babel/preset-env` `babel-loader@8`
+ * 区别 `@babel/plugin-transform-runtime` `@babel/runtime-corejs3`
+
+```js
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "modules": false
+        }]
+    ],
+    "plugins": [
+        ["@babel/plugin-transform-runtime", {
+            "corejs": 3
+        }]
+    ]
+}
+```
 
 1. plugin
 
