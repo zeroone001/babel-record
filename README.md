@@ -53,6 +53,7 @@
  * 区别 `@babel/plugin-transform-runtime` `@babel/runtime-corejs3`
 
 ```js
+// 如果使用useESModules:true 那么就不需要使用@babel/plugin-transform-modules-commonjs, 默认是false
 {
     "presets": [
         ["@babel/preset-env", {
@@ -61,7 +62,8 @@
     ],
     "plugins": [
         ["@babel/plugin-transform-runtime", {
-            "corejs": 3
+            "corejs": 3,
+            "useESModules": false
         }]
     ]
 }

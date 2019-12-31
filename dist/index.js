@@ -1,16 +1,14 @@
 "use strict";
 
-require("core-js/modules/es.object.to-string");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-require("core-js/modules/es.promise");
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 
 var _class = _interopRequireDefault(require("./class.js"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
-var test = new Promise(function (resolve, reject) {
+var test = new _promise["default"](function (resolve, reject) {
   console.log('1231233');
   resolve('123');
 });

@@ -1,29 +1,29 @@
 "use strict";
 
-require("core-js/modules/es.object.define-property");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
+var _Object$defineProperty = require("@babel/runtime-corejs3/core-js-stable/object/define-property");
+
+_Object$defineProperty(exports, "__esModule", {
   value: true
 });
+
 exports["default"] = void 0;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/esm/classCallCheck"));
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/esm/createClass"));
 
 var Boo =
 /*#__PURE__*/
 function () {
   function Boo(age) {
-    _classCallCheck(this, Boo);
-
+    (0, _classCallCheck2["default"])(this, Boo);
     this.age = age;
     this._name = 'lys';
   }
 
-  _createClass(Boo, [{
+  (0, _createClass2["default"])(Boo, [{
     key: "look",
     value: function look() {}
   }, {
@@ -37,7 +37,6 @@ function () {
       this._name = name;
     }
   }]);
-
   return Boo;
 }();
 
