@@ -32,7 +32,13 @@
         }]
     ],
     "plugins": [
-
+        // [
+        //     "import",
+        //     {
+        //         "libraryName": "antd",
+        //         "style": true
+        //     }
+        // ]
     ]
 }
 // 入口文件顶部加如下代码

@@ -1,12 +1,12 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 require("core-js/modules/es.object.to-string");
 
 require("core-js/modules/es.promise");
 
 var _class = _interopRequireDefault(require("./class.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // import "core-js/stable";
 // import "regenerator-runtime/runtime";
