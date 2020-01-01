@@ -1,13 +1,13 @@
 {
     "presets": [
-        ["@babel/preset-env", {
-            "modules": false,
-            "corejs": 3,
-            "useBuiltIns": "usage"
-        }]
+        ["@babel/preset-env"]
     ],
     "plugins": [
-        ["@babel/plugin-transform-runtime"],
-        ["@babel/plugin-transform-modules-commonjs"]
+        ["@babel/plugin-transform-runtime", {
+            "corejs": 3,
+            "helpers": true,
+            "useESModules": true
+        }]
+        // ["@babel/plugin-transform-modules-commonjs"]
     ]
 }

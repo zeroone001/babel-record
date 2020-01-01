@@ -17,12 +17,13 @@
 
 需要安装的依赖有
  * 基础:`@babel/core @babel/cli @babel/preset-env` `babel-loader@8`
- * 区别 `core-js@3` `regenerator-runtime`
+ * `@babel/plugin-transform-plugin` `@babel/plugin-transform-modules-commonjs`
 
 配置如下
 ```js
 // .babelrc
 // The `corejs` option only has an effect when the `useBuiltIns` option is not `false`
+// babel-plugin-import
 {
     "presets": [
         ["@babel/preset-env", {
@@ -32,26 +33,27 @@
         }]
     ],
     "plugins": [
-        // [
-        //     "import",
-        //     {
-        //         "libraryName": "antd",
-        //         "style": true
-        //     }
-        // ]
+        ["@babel/plugin-transform-plugin"],
+        ["import", {
+            "libraryName": "mint-ui",
+            "libraryDirectory": "lib",
+            "style": true
+        }],
+        ["@babel/plugin-transform-modules-commonjs"]
     ]
 }
 // 入口文件顶部加如下代码
 //import "core-js/stable"; // polyfill ES features
 //import "regenerator-runtime/runtime"; // 转化 generator function 
 ```
-2. 第二种方案 transform-runtime
+1. 第二种方案 transform-runtime
 
 需要安装的依赖有
  * 基础:`@babel/core @babel/cli @babel/preset-env` `babel-loader@8`
  * 区别 `@babel/plugin-transform-runtime` `@babel/runtime-corejs3`
 
 ```js
+// 如果使用useESModules:true 那么就不需要使用@babel/plugin-transform-modules-commonjs, 默认是false
 {
     "presets": [
         ["@babel/preset-env", {
@@ -60,7 +62,8 @@
     ],
     "plugins": [
         ["@babel/plugin-transform-runtime", {
-            "corejs": 3
+            "corejs": 3,
+            "useESModules": false
         }]
     ]
 }
